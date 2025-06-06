@@ -17,9 +17,7 @@
       --flame-center: #ffeb3b;
       --flame-edge: orange;
     }
-
     * { box-sizing: border-box; }
-
     html, body {
       margin: 0;
       padding: 0;
@@ -31,7 +29,6 @@
       text-align: center;
       position: relative;
     }
-
     #startSection {
       display: flex;
       justify-content: center;
@@ -41,7 +38,6 @@
       padding: 0 20px;
       text-align: center;
     }
-
     #startBtn {
       padding: 15px 30px;
       font-size: 1.2em;
@@ -52,16 +48,13 @@
       cursor: pointer;
       transition: 0.3s ease;
     }
-
     #startBtn:hover {
       background-color: #e91e63;
     }
-
     #birthdayContent {
       display: none;
       padding: 0 15px;
     }
-
     h1 {
       font-size: 3.3em;
       margin-top: 20px;
@@ -69,7 +62,6 @@
       text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
       animation: pop 1.5s ease-out infinite alternate;
     }
-
     .message {
       max-width: 700em;
       margin: 0 auto;
@@ -79,18 +71,16 @@
       animation: fadeIn 2s ease-in-out;
       margin-bottom: 15px;
       margin-top: 7px;
-      min-height: 130px; /* keep height stable to avoid flicker */
-      white-space: pre-wrap; /* keep line breaks */
-      text-align: justify;
+      min-height: 130px;
+      white-space: pre-wrap;
+      text-align: center;
     }
-
     .cake {
       position: relative;
       margin: 20px auto;
       width: 200px;
       height: 180px;
     }
-
     .layer {
       position: absolute;
       left: 50%;
@@ -99,11 +89,9 @@
       border-radius: 10px;
       box-shadow: inset 0 0 15px rgba(0,0,0,0.3);
     }
-
     .bottom { width: 200px; height: 60px; bottom: 0; }
     .middle { width: 140px; height: 50px; bottom: 60px; }
     .top { width: 80px; height: 40px; bottom: 110px; }
-
     .candle {
       top: -12px;
       left: 50%;
@@ -114,7 +102,6 @@
       border-radius: 2px;
       transform: translateX(-50%);
     }
-
     .flame {
       position: absolute;
       top: -20px;
@@ -127,7 +114,6 @@
       animation: flicker 0.3s infinite alternate;
       box-shadow: 0 0 10px 3px rgba(255, 235, 59, 0.6);
     }
-
     .footer {
       font-size: 1.5em;
       color: var(--text-footer);
@@ -137,7 +123,6 @@
       bottom: 10px;
       width: 100%;
     }
-
     .balloon {
       position: absolute;
       bottom: -70px;
@@ -147,7 +132,6 @@
       animation: float 10s linear infinite;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     }
-
     .balloon::after {
       content: "";
       position: absolute;
@@ -158,7 +142,6 @@
       background: var(--balloon-string);
       transform: translateX(-50%);
     }
-
     .tree {
       position: fixed;
       width: 80px;
@@ -166,10 +149,8 @@
       bottom: 0;
       z-index: 5;
     }
-
     .tree.left { left: 0; transform: scaleX(-1); }
     .tree.right { right: 0; transform: scaleX(-1); }
-
     .spark-container {
       position: fixed;
       top: 0;
@@ -179,7 +160,6 @@
       pointer-events: none;
       z-index: 1000;
     }
-
     .spark {
       position: absolute;
       width: 12px;
@@ -189,86 +169,65 @@
       box-shadow: 0 0 15px #ff4081, 0 0 30px #ffeb3b, 0 0 50px rgba(255, 255, 255, 0.4);
       animation: burst 1.2s ease-out forwards;
     }
-
     @keyframes burst {
       0% { transform: scale(1) translate(0, 0); opacity: 1; }
       100% { transform: scale(0.5) translate(var(--dx), var(--dy)); opacity: 0; }
     }
-
     @keyframes float {
       0% { transform: translateY(0); opacity: 1; }
       100% { transform: translateY(-100vh); opacity: 0; }
     }
-
     @keyframes pop {
       0% { transform: scale(1); }
       100% { transform: scale(1.05); }
     }
-
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
-
     @keyframes flicker {
       from { transform: translateX(-50%) scale(1); opacity: 1; }
       to { transform: translateX(-50%) scale(1.2); opacity: 0.8; }
     }
-
-    /* 🔧 Responsive Styles */
     @media (max-width: 768px) {
       h1 { font-size: 2em; }
-      .message { font-size: 1em; padding: 10px; }
+      .message { font-size: 1em; padding: 10px; text-align: center; }
       .cake { transform: scale(0.9); }
-      .footer{ position: centre; text-align: center; } 
+      .footer{ text-align: center; } 
       .tree { width: 5em; }
     }
-
     @media (max-width: 480px) {
       h1 { text-align: center; font-size: 1.5em; }
       #startBtn { font-size: 1em; padding: 12px 24px; }
       .cake { transform: scale(0.75); }
-      .message { font-size: 0.75em; padding: 10px; 
-       text-align:justify; }
-      .footer { font-size: 0.65em; text-align: center;}
+      .message { font-size: 0.75em; padding: 10px; text-align: center; }
+      .footer { font-size: 0.65em; text-align: center; }
     }
   </style>
 </head>
 <body>
-
   <div id="startSection">
-    <h1>Get Your Birthday Surprise! 🎉🎁</h1>
+    <h1>Get Your Birthday Surprise! 🎉🏱</h1>
     <button id="startBtn">Start</button>
   </div>
-
   <div id="birthdayContent">
-
     <div class="spark-container" id="sparkContainer"></div>
-
     <h1>Happy Birthday</h1>
     <h1 style="margin-top: -30px;">🎉 Bacha 🎂</h1>
-
     <div class="message" id="message"></div>
-
     <div class="cake">
       <div class="layer top"></div>
       <div class="layer middle"></div>
       <div class="layer bottom"></div>
       <div class="candle"><div class="flame"></div></div>
     </div>
-
     <img src="https://clipart-library.com/images/8cGogqXca.png" alt="Tree" class="tree left" />
     <img src="https://clipart-library.com/images/8cGogqXca.png" alt="Tree" class="tree right" />
-
-    <div class="footer">
-      Made by Developer Mujahid
-    </div>
+    <div class="footer">Made by Developer Mujahid</div>
   </div>
-
-  <audio id="bgm" loop>
-    <source src="https://raw.githubusercontent.com/MujahidAliDeveloper01/Birthday-Surprise/fec46b90049942a6f373744bed779ac4ed0cfa2a/birthday.mp3" type="audio/mp3" />
+  <audio id="bgm" autoplay loop>
+    <source src="https://raw.githubusercontent.com/MujahidAliDeveloper01/BirthdaySurprise/1429c16d7d2b888b1634b2ec758b206ee2f09fae/birthday.mp3" type="audio/mp3" />
   </audio>
-
   <script>
     const startBtn = document.getElementById("startBtn");
     const startSection = document.getElementById("startSection");
@@ -279,10 +238,11 @@
     const fullMessage = `Happy Birthday 🎂 🎂 Little Sister May your day be as bright, beautiful, and delightful as you are. Wishing you a year filled with love, laughter, and fun. May all your dreams come true, and may Allah Almighty protect you from all bad spirits and guide you on your journey. May this special day bring you joy, happiness, countless blessings and love.`;
 
     startBtn.addEventListener("click", () => {
+      audio.currentTime = 4; // Skip first 3 seconds
       audio.play().then(() => {
         startSection.style.display = "none";
         birthdayContent.style.display = "block";
-        typeMessage(fullMessage, messageDiv, 15); // 30ms delay per character
+        typeMessage(fullMessage, messageDiv, 15);
         launchEffects();
       }).catch(() => {
         alert("Please allow audio to play!");
@@ -290,7 +250,7 @@
     });
 
     function typeMessage(text, element, delay = 50) {
-      element.textContent = ""; // clear before typing
+      element.textContent = "";
       let i = 0;
       function typeNext() {
         if (i < text.length) {
@@ -311,7 +271,6 @@
         b.style.background = `radial-gradient(circle, hsl(${Math.random() * 360}, 90%, 70%), hsl(${Math.random() * 360}, 70%, 60%))`;
         document.body.appendChild(b);
       }
-
       const container = document.getElementById("sparkContainer");
       function createSpark() {
         const spark = document.createElement("div");
@@ -327,7 +286,6 @@
         container.appendChild(spark);
         setTimeout(() => spark.remove(), 1200);
       }
-
       setInterval(() => {
         for (let i = 0; i < 10; i++) {
           setTimeout(createSpark, i * 50);
