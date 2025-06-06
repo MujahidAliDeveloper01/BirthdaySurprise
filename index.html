@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🎉 Happy Birthday Bacha!</title>
+  <title>🎉 Happy Birthday MOM!</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     :root {
@@ -62,19 +62,24 @@
       text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
       animation: pop 1.5s ease-out infinite alternate;
     }
-    .message {
-      max-width: 700em;
-      margin: 0 auto;
-      font-size: 1.5em;
-      color: var(--text-sub);
-      padding: 20px;
-      animation: fadeIn 2s ease-in-out;
-      margin-bottom: 15px;
-      margin-top: 7px;
-      min-height: 130px;
-      white-space: pre-wrap;
-      text-align: center;
-    }
+.message {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.5em;
+  color: var(--text-sub);
+  padding: 20px;
+  animation: fadeIn 2s ease-in-out;
+  margin-bottom: 15px;
+  margin-top: 7px;
+  min-height: 130px;
+  white-space: pre-wrap;
+  text-align: justify;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
     .cake {
       position: relative;
       margin: 20px auto;
@@ -206,15 +211,19 @@
   </style>
 </head>
 <body>
+
   <div id="startSection">
     <h1>Get Your Birthday Surprise! 🎉🎁 </h1>
     <button id="startBtn">Start</button>
   </div>
+
   <div id="birthdayContent">
     <div class="spark-container" id="sparkContainer"></div>
     <h1>Happy Birthday</h1>
     <h1 style="margin-top: -30px;">🎉 Bacha 🎂</h1>
     <div class="message" id="message"></div>
+<br>
+</br>
     <div class="cake">
       <div class="layer top"></div>
       <div class="layer middle"></div>
